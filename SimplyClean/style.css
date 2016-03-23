@@ -1,0 +1,608 @@
+/*
+Theme Name: Simply Clean
+Theme URI: http://nytogroup.com/products/wordpress-themes/topcat-lite/
+Author: Siddharth Shanker Mishra
+Author URI: http://dejanmarkovic.com/
+License: GNU General Public License v2 or later
+Description: Simply Clean Theme is a responsive, clean and beautiful business and blog style WordPress theme featuring custom menu and custom background, custom header and easy to read typography that scales to fit all screens. Simply Clean Themesupports widgetized areas (both in the sidebar and in the footer), featured images (thumbnails for custom header images for posts and pages) and optional social menu. This is fully optimized theme best suited for any kind of personal blog or a business website. Simply Clean Theme is a production ready theme used for my book WordPress Responsive Theme Design Essentials. Live Demo is available here: http://dejanmarkovic.com/. Demo content is available for download here: http://nytogroup.com/downloads/topcat.test-data.xml
+
+Version: 1.0.16
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: topcat-lite
+
+Tags: black, blue,white, two-columns, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, sticky-post, threaded-comments, translation-ready, light
+
+Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License.
+Logo has been created by NYTO Group and it's license is GNU General Public License v2.0
+Background image has been downloaded from http://gratisography.com/pictures/162_1.jpg
+Background is licensed under Creative Commons Zero.
+
+**FontAwesome**
+This theme uses the great icon font FontAwesome. Following licences apply to this software:
+The Font Awesome font is licensed under the SIL OFL 1.1:
+http://scripts.sil.org/OFL
+Font Awesome CSS, LESS, and Sass files are licensed under the MIT License:
+http://opensource.org/licenses/mit-license.html
+The Font Awesome documentation is licensed under the CC BY 3.0 License:
+http://creativecommons.org/licenses/by/3.0/
+Full details: http://fontawesome.io/license
+
+Google fonts license for ABeeZee font:	SIL Open Font License, 1.1
+Google fonts license for PT Sans font: SIL Open Font License, 1.1
+
+JavaScript files licenses:
+customizer.js GNU General Public License v2.0
+global.js GNU General Public License v2.0
+hoverIntent.js GNU General Public License v2.0
+masonry_custom.js GNU General Public License v2.0
+modernizr.custom.js  MIT & BSD
+navigation.js GNU General Public License v2.
+respond.js MIT License
+skip-link-focus-fix.js GNU General Public License v2.
+superfish.min.js Dual licensed under the MIT and GPL licenses
+
+Kirki framework:
+- License: GPLv2 or later
+- License URI: http://www.gnu.org/licenses/gpl-2.0.html
+- location: https://github.com/aristath/kirki
+
+Simply Clean WordPress Theme, Copyright 2015 Siddharth Shanker Mishra
+Simply Clean is distributed under the terms of the GNU GPL license
+
+Simply Clean is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/* Reset Css*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height:1.4;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* This is chaka theme */
+
+/* Override browser default style*/
+
+
+
+
+
+/* Layouts */
+
+
+
+body{
+    
+    background-color:#F6F6F6;
+    color:#6B6B6B;
+    word-wrap: break-word;
+}
+
+p {
+    margin: 1.5em 0px;
+    text-align:justify;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.screen-reader-text {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+}
+.outer-main-container{
+    max-width:1000px;
+    padding:0px 10px;
+    background-color:#FFF;
+    margin:0 auto 0 !important;
+}
+.site-header{
+    position:relative;
+    border-bottom:1px solid grey;
+    padding: 10px 0px;
+}
+
+.social-links{
+    position:absolute;
+    top:10%;
+    right:5%;
+    width:auto;
+}
+
+.social-media-icons {
+    display: inline-block;
+    margin: 0px;
+    list-style:outside none none;
+}
+
+.social-media-icons li{
+    display: inline-block;
+}
+
+.social-media-icons a {
+    color: #6B6B6B;
+    margin: 0px 8px;
+    transition: color 0.1s ease-in-out 0s;
+}
+
+.main-menu{
+    width:100%;
+    height:30px;
+    text-align:center;
+    border-bottom:1px solid grey;
+}
+
+.main-menu ul{
+    list-style: none;
+
+}
+
+.main-menu ul li{
+    list-style:none;
+    height: 30px;
+    line-height: 30px;
+    padding:0px 5px;
+    /*line-height:1.30em;*/
+    font-size:0.875em;    
+    font-weight:400;/*0.82em*/
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+
+.main-menu ul li li{
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    background-color: #F2F2F2;
+}
+
+.main-menu ul li li:first-child{
+    border-top: 1px solid grey;
+}
+
+.main-menu a{
+    text-decoration:none;
+    color:#6B6B6B;
+}
+
+.main-menu ul ul{
+    display: none;
+    position: absolute;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.main-menu ul ul li {
+    width: 180px;
+    text-align: left;
+    min-height: 30px;
+    height: auto;
+}
+
+.main-menu ul li:hover > ul{
+    display: block;
+}
+
+.main-menu ul ul ul {
+    margin-left:170px;
+    top:0px;
+    z-index: 9999;
+}
+
+.main-container{
+    width:100%;
+    padding:5px 0px;
+}
+
+.main-content{
+    float:left;
+    width:70%;
+    overflow:hidden;
+}
+
+.sidebar{
+    float:right;
+    color: #000;
+    width:28%;
+    padding-top:5px;
+    padding-left:2%;
+    /*background-color:cadetblue;*/
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: #575E5B;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;  
+    transition: all 0.2s ease-in;
+}
+
+.widget {
+    margin-bottom: 2em;
+}
+
+.clear{
+    clear:both;
+}
+
+.site-footer{
+    width:100%;
+    text-align:center;
+    border-top:1px solid grey;
+    margin-top:10px;
+    padding:10px 0px;
+    font-size: 0.80em;
+}
+
+.search-hd{
+	font-family: "Open Sans",sans-serif;
+	padding-bottom:3px;
+	margin-bottom:15px;
+	border-bottom:1px solid grey;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]), textarea {
+    width: 100%;
+    font-family: "Open Sans",sans-serif;
+    padding: 10px 12px;
+    max-width: 27.75em;
+    border: 1px solid #E8E8E8;
+    background: #F2F2F2 none repeat scroll 0% 0%;
+    border-radius: 0px;
+    transition: all 0.1s ease-in-out 0s;
+    border:1px solid #CCC;
+    border-radius:3px;
+}
+
+input[type="submit"] {
+    font-family: "Open Sans",sans-serif;
+    padding: 10px 12px;
+    color: #FFF;
+    background: #333 none repeat scroll 0% 0%;
+    border: medium none;
+    border-radius: 0px;
+    transition: background 0.1s ease-in-out 0s;
+}
+
+.search-form .search-submit{
+    display:none;
+}
+
+.search-form input#search-field{
+    border:1px solid #CCC;
+    border-radius:3px;
+}
+
+.post-down-meta .post-categories a{
+    font-weight: 700;
+    text-decoration: none;
+    color: #575E5B;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;  
+    transition: all 0.2s ease-in;
+}
+
+.comments {
+    padding: 0px;
+    margin:3em 0px;
+}
+
+.comment-list {
+    list-style: outside none none;
+    margin: 3em 0px;
+}
+
+.comment-respond label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.further-reading {
+    margin: 2.25em 0px 0px;
+    padding: 2.25em 0px;
+    border-top: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.further-reading .previous {
+    margin-bottom: 0px;
+}
+
+.further-reading div {
+    display: inline-block;
+    vertical-align: top;
+    width: 49.5%;
+}
+
+.further-reading .next {
+    text-align: right;
+}
+
+.further-reading span {
+    display: block;
+}
+
+.further-reading a {
+    font-weight: 700;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    clear: both;
+    color: #0480b5;
+    font-family: "Open Sans",sans-serif;
+    color: #333;
+}
+
+h1{
+    font-size: 2em;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.17em;
+}
+h4{
+    font-size: 1em;
+}
+h5{
+    font-size: 0.83em;
+}
+h6{
+    font-size: 0.75em;
+}
+
+a {
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;  
+    transition: all 0.2s ease-in;
+}
+/*-- some global styles ---- */
+b, strong {
+    font-weight: 700;
+}
+address {
+    font-style: italic;
+    margin: 0 0 1.75em;
+}
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+abbr, acronym {
+    border-bottom: 1px dotted #d1d1d1;
+    cursor: help;
+}
+big {
+    font-size: 125%;
+}
+dfn, cite, em, i {
+    font-style: italic;
+}
+code {
+    background-color: #d1d1d1;
+    padding: 0.125em 0.25em;
+}
+del {
+    opacity: 0.8;
+}
+pre {
+    border: 1px solid #d1d1d1;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.3125;
+    margin: 0 0 1.75em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.75em;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+code, kbd, tt, var, samp, pre {
+    font-family: Inconsolata, monospace;
+}
+blockquote {
+    border-left-width: 4px;
+    color: #686868;
+    font-size: 19px;
+    font-size: 1.0985rem;
+    font-style: italic;
+    line-height: 1.4736842105;
+    margin: 0 0 1.4736842105em;
+    padding: 0 0 0 0.263157895em;
+}
+blockquote cite, blockquote small {
+    color: #1a1a1a;
+    display: block;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+blockquote cite::before, blockquote small::before {
+    content: "\2014\00a0";/*-- this will add dash before cite */
+}
+.gallery {
+    margin: 0 -1.1666667% 1.75em;
+}
+/* END -- some global styles ---- */
+
+.site-header small, .post-meta{
+    font-size: 0.75em;
+    font-style:italic;
+    color:#6B6B6B;
+    font-weight:400;
+}
+
+.site-header small p{
+	margin:0px;
+}
+
+.site-header h1{
+    font-weight:700;
+    text-transform:uppercase;
+    color:#575E5B;
+    font-size: 1.5em;
+    font-family: "Open Sans", sans-serif;
+}
+
+.site-header a{
+	color:#575E5B;
+    text-decoration: none;
+}
+
+/*a {
+	text-decoration: none;
+	color: #575E5B;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;  
+	transition: all 0.2s ease-in;
+	text-decoration: none;	
+}*/
+
+.post-header h1{
+    font-size: 2.3125em;
+    line-height:1.297;
+}
+
+.post-header a{
+    text-decoration: none;
+    color:#333;
+    
+}
+
+.post-header a:hover,.post-header a:active,.post-header a:focus {
+    color: #6B6B6B;
+}
+
+.post-meta{
+    font-size:0.75em;
+    line-height:1.5;
+}
+
+.post-content {
+    margin: 0.75em 0px;
+    color:#6B6B6B;
+}
+
+.more-link {
+    display: inline-block;
+    transition: all 0.1s ease-in-out 0s;
+    margin-top:5px;
+    text-decoration: none;
+    color:#0480b5;
+    font-style:italic;
+}
+
+/*====== Table Design ======*/
+table,
+th,
+td {
+    border: 1px solid #d1d1d1;
+    text-align: left;
+}
+
+th {
+    border-width: 0 1px 1px 0;
+    font-weight: 700;
+}
+
+th,td{
+    padding: 0.4375em;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin: 0 0 1.75em;
+    table-layout: fixed;
+    /* Prevents HTML tables from becoming too wide */
+    width: 100%;
+}
+
+/*====== Definition List ======*/
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin: 0 0 1.7em;
+}
+
+/*====== ordered unordered lists ======*/
+.post-container ul {
+    list-style: disc;
+}
+.post-container ol {
+    list-style: decimal;
+}
+.post-container ul, ol {
+    margin: 0 0 1.75em 1.25em;
+    padding: 0;
+}
+.post-container li > ul, .post-container li > ol {
+    margin-bottom: 0px;
+}
